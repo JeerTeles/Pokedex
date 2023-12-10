@@ -1,0 +1,31 @@
+Requisição HTTP
+
+url: https://pokeapi.co/api/v2/pokemon
+    {ip} {path = caminho de indentificação de recurso}
+
+ip: https://pokeapi.co
+    http://127.0.0.1:3000    
+
+Request: Method: GET | POST | PUT | DELETE 
+
+Get --> Buscar pokemon
+Post -- > Inserir pokemon
+Put --> Atualiza Pokemon
+Delete --> Deletar pokemon 
+
+
+string de busca -->  url: https://pokeapi.co/api/v2/pokemon?type=grass exemplo( pega todos polemons de tipo grama)
+string de busca -->  url: https://pokeapi.co/api/v2/pokemon?type=grass&name=i exemplo( pega todos polemons de tipo grama com a inicial do nome i)
+
+Request Headers --> Configurações
+    accept-language: pt-br, pt;q=0,9, en-us; q=0.8, en;q=0.7, gj;q=0.6
+
+Response Headers -->
+    content-type: application/json
+
+Body {
+    "name": "Test
+}
+
+Status cody: 201
+
