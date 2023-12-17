@@ -1,5 +1,7 @@
 const pokemonList = document.getElementById('pokemonList');
-const  loadMoraButton = document.getElementById('loadMoreButton')
+const  loadMoreButton = document.getElementById('loadMoreButton')
+
+const maxRecords = 151
 const limit = 12;
 let offset = 0;
     
@@ -33,9 +35,19 @@ function loadPokemonItens(offset, limit) {
 
 loadPokemonItens(offset, limit)
 
-loadMoraButton.addEventListener('click', () => {
+/* paginação e removndo botão */
+loadMoreButton.addEventListener('click', () => {
     offset += limit
-    loadPokemonItens(offset, limit)
+    const qtdRecordsWithNextPage = offset + limit
+
+    if(qtdRecordsWithNextPage >= maxRecords) {
+        const newLimit = maxRecords - offset
+        loadPokemonItens(offset, newLimit)
+        
+        loadMoreButton.parentElement.removeChild(loadMoreButton)
+    }else {
+        loadPokemonItens(offset, limit)   
+    }
 })
       
  
