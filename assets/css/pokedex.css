@@ -50,6 +50,18 @@
     background-color:  #f9aec7;
 }
 
+body {
+    background-image: url("/assets/img/pokemon2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+section.content {
+    background: transparent;
+}
+
 .content h1 {
     margin: 0;
 }
@@ -123,18 +135,20 @@
 .pagination button {
     color: #fff;
     background-color: #6c79bd;
+    width: 20%;
     border: none;
     border-radius: 1rem;
     margin: .25rem 0;
     padding: .25rem  .5rem;
-    font-size: .625rem;
+    font-size: .825rem;
+    cursor: pointer;
 }
 
 /* media queries */
 
 @media screen and (min-width: 992px) {
-    .content {
-        height: auto;
+    .content { 
+        margin: auto;
         max-width: 1992px;
         margin: 1rem auto;
         border-radius: 1rem;
